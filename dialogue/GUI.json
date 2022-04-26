@@ -1,0 +1,203 @@
+{
+	"format_version": "1.17.100",
+	"minecraft:npc_dialogue":
+	{
+		"scenes":
+		[
+			{
+				"scene_tag": "guipage0",
+				"npc_name": { "rawtext": [ {"text":"Server GUI"} ] },
+				"text": { "rawtext": [ {"text":"Want Addons/realms/realmdocs and more or even want to download this gui go to https://mcbehub.com/"} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"Warps"} ] },
+						"commands": [
+							"/dialogue open @s @initiator guipage1"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Shop"} ] },
+						"commands": [
+							"/dialogue open @s @initiator shop0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Faction Management"} ] },
+						"commands": [
+							"/dialogue open @s @initiator guipage3 "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Codes"} ] },
+						"commands": [
+							"/dialogue open @s @initiator guipage4 "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Elite+ menu"} ] },
+						"commands": [
+							"/dialogue open @s @initiator [tag=elite] guipage5 ",
+							"/execute @initiator [tag=!elit] ~~~ playsound note.bass ",
+							"/tellraw @initiator [tag=!elite] {\"rawtext\":[{\"text\":\"You dont have elite pass\n go bye it in shop section\"}]}"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Close GUI"} ] },
+						"commands": [
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "guipage1",
+				"npc_name": { "rawtext": [ {"text":"Warps"} ] },
+				"text": { "rawtext": [ {"text":"Server GUI Use This to navigate the world and see amazing things"} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"Warp Spawn"} ] },
+						"commands": [
+							"/tp @initiator 0 4 0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Warp Shop"} ] },
+						"commands": [
+							"/tp @initiator 20 4 20"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Warp Crates"} ] },
+						"commands": [
+							"/tp @initiator 90 4 0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Warp home"} ] },
+						"commands": [
+							"/tp @initiator 4 4 0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Warp hub"} ] },
+						"commands": [
+							"/tp @initiator 900 4 0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Close GUI"} ] },
+						"commands": [
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "shop0",
+				"npc_name": { "rawtext": [ {"text":"Shop"} ] },
+				"text": { "rawtext": [ {"text":"Server GUI Use This to navigate the world and see amazing things"} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"Buy:"} ] },
+						"commands": [
+							"/dialogue open @s @initiator shop1 "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Warps:"} ] },
+						"commands": [
+							"/dialogue open @s @initiator shop1 "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Sell:"} ] },
+						"commands": [
+							"/dialogue open @s @initiator shop2 "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Close GUI"} ] },
+						"commands": [
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "guipage5",
+				"npc_name": { "rawtext": [ {"text":"Elite+ menu"} ] },
+				"text": { "rawtext": [ {"text":"Server GUI Use This to navigate the world and see amazing things"} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"Fly"} ] },
+						"Commands": [
+							"/ability @initiator mayfly true"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"close gui"} ] },
+						"Commands": [
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "shop1",
+				"npc_name": { "rawtext": [ {"text":"Shop"} ] },
+				"text": { "rawtext": [ {"text":"Server GUI Use This to navigate the world and see amazing things"} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"Buy: Diamonds"} ] },
+						"commands": [
+							"/execute @initiator[scores={money=100..}] ~~~ give @initiator diamond 1",
+							"/execute @initiator[scores={money=100..}] ~~~ scoreboard players remove @initiator money 100",
+							"/execute @initiator[scores={money=..99}] ~~~ tellraw @initiator {\"rawtext\":[{\"text\":\"§l§cYou do not have enough Money\"}]}",
+							"/execute @initiator[scores={money=..99}] ~~~ playsound note.bass "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Buy: Dirt"} ] },
+						"commands": [
+							"/execute @initiator[scores={money=20..}] ~~~ give @initiator dirt 1",
+							"/execute @initiator[scores={money=20..}] ~~~ scoreboard players remove @initiator money 20",
+							"/execute @initiator[scores={money=..19}] ~~~ tellraw @initiator {\"rawtext\":[{\"text\":\"§l§cYou do not have enough Money\"}]}",
+							"/execute @initiator[scores={money=..19}] ~~~ playsound note.bass "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Close GUI"} ] },
+						"commands": [
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "shop2",
+				"npc_name": { "rawtext": [ {"text":"Shop"} ] },
+				"text": { "rawtext": [ {"text":"Server GUI Use This to navigate the world and see amazing things"} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"Buy: Diamonds"} ] },
+						"commands": [
+							"/execute @initiator[scores={money=100..}] ~~~ give @initiator diamond 1",
+							"/execute @initiator[scores={money=100..}] ~~~ scoreboard players remove @initiator money 100",
+							"/execute @initiator[scores={money=..99}] ~~~ tellraw @initiator {\"rawtext\":[{\"text\":\"§l§cYou do not have enough Money\"}]}",
+							"/execute @initiator[scores={money=..99}] ~~~ playsound note.bass "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Buy: Dirt"} ] },
+						"commands": [
+							"/execute @initiator[scores={money=20..}] ~~~ give @initiator dirt 1",
+							"/execute @initiator[scores={money=20..}] ~~~ scoreboard players remove @initiator money 20",
+							"/execute @initiator[scores={money=..19}] ~~~ tellraw @initiator {\"rawtext\":[{\"text\":\"§l§cYou do not have enough Money\"}]}",
+							"/execute @initiator[scores={money=..19}] ~~~ playsound note.bass "
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"Close GUI"} ] },
+						"commands": [
+						]
+					}
+				]
+			}
+		]
+	}
+}
