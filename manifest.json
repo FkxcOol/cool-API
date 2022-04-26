@@ -1,0 +1,42 @@
+{
+  "format_version": 1,
+  "header": {
+    "description": "§l§7Docs§8: §6mcbehub.com§8, §7Creator§8: §eSmell of Curry§r",
+    "name": "§l§eServer §fGUI BEH v3.0.0§r",
+    "uuid": "03333473-776a-4ed0-a901-673f4ca3b10c",
+    "version": [
+      3,
+      0,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "description": "",
+      "uuid": "3c2df351-b6d3-4ad7-ae52-b9ee4502275e",
+      "version": [
+        3,
+        0,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Smell of Curry"
+    ],
+    "license": "License.md",
+    "url": "https://mcbehub.com/"
+  },
+  "dependencies": [
+    {
+      "uuid": "29d51a85-d91b-4376-a405-5f7fee21fd37",
+      "version": [
+        3,
+        0,
+        0
+      ]
+    }
+  ]
+}
